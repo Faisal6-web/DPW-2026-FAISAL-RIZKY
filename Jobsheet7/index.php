@@ -15,6 +15,10 @@ $totalAnggota = count($_SESSION['anggota'] ?? []);
         <h2>Ringkasan</h2>
         <article>
             <h3>Total Buku</h3>
+            <p><?php echo $totalBuku; ?></p>
+        </article>
+        <article>
+            <h3>Total Anggota</h3>
             <p><?php echo $totalAnggota; ?></p>
         </article>
         <article>

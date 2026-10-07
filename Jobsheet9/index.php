@@ -27,4 +27,4 @@ $totalAnggota = $pdo->query("SELECT COUNT(*) FROM anggota")->fetchColumn();
             <p>0</p>
         </article>
     </section>
-<?php include __DIR__ . '/include/footer.php'; ?>
+<?php include __DIR__ . '/includes/footer.php'; ?>

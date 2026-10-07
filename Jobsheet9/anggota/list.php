@@ -26,7 +26,7 @@ $stmt->bindValue('limit', $perPage, PDO::PARAM_INT);
 $stmt->bindValue('offset', $offset, PDO::PARAM_INT);
 $stmt->execute();
 
-$daftarAnggota = $stmt->fecthAll(PDO::FETCH_ASSOC);
+$daftarAnggota = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $totalPages = max(1, (int) ceil($totalRows / $perPage));
 ?>
 

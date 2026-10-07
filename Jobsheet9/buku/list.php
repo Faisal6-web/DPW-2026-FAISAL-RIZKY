@@ -59,7 +59,7 @@ $totalPages = max(1, (int) ceil($totalRows / $perPage));
                         </tr>
                     </thead>
                     <tbody>
-                        <?php if (empty9($daftarBuku)): ?>
+                        <?php if (empty($daftarBuku)): ?>
                             <tr>
                                 <td colspan="5">Tidak ada data buku yang cocok.</td>
                             </tr>

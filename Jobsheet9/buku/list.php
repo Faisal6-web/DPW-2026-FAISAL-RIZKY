@@ -27,7 +27,7 @@ $stmt->bindValue('offset', $offset, PDO::PARAM_INT);
 $stmt->execute();
 
 $daftarBuku = $stmt->fetchAll(PDO::FETCH_ASSOC);
-$totalPages = max(1, (int) ceil($totalRows / $totalPages));
+$totalPages = max(1, (int) ceil($totalRows / $perPages));
 ?>
 
         <section>

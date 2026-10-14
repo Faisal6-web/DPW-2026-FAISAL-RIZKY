@@ -1,0 +1,7 @@
+[
+    {"nama": "Rendang", "kategori": "Makanan", "harga": 15000, "stok": 10},
+    {"nama": "Ayam", "kategori": "Makanan", "harga": 12000, "stok": 17},
+    {"nama": "Es Jeruk", "kategori": "Minuman", "harga": 5000, "stok": 20},
+    {"nama": "Sirup", "kategori": "Minuman", "harga": 8000, "stok": 10}
+]
+

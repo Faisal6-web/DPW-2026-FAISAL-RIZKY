@@ -12,7 +12,7 @@ body {
 }
 
 a{
-    color: #1d5b8a;
+    color: #fffbeb;
     text-decoration: none;
 }
 
@@ -21,8 +21,8 @@ a:hover {
 }
 
 header {
-    background-color: #1d5b8a;
-    color: #fff;
+    background-color: #c62828;
+    color: #f9a826;
     padding: 1rem 1.5rem;
     display: flex;
     align-items: center;
@@ -41,7 +41,7 @@ header nav ul {
 }
 
 header nav a {
-    color: #fff;
+    color: #fdfbf7;
     font-weight: 500;
 }
 
@@ -53,7 +53,7 @@ main {
 }
 
 section {
-    background-color: #fff;
+    background-color: #fdfbf7;
     border-radius: 8px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
@@ -62,7 +62,7 @@ section {
 
 section h2 {
     margin-bottom: 1rem;
-    color: #1d5b8a;
+    color: #f9a826;
 }
 
 main section:nth-of-type(2) h2{
@@ -91,7 +91,7 @@ main section:nth-of-type(2) article h3 {
 main section:nth-of-type(2) article p {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #1d5b8a;
+    color: #e67e22;
 }
 
 table {
@@ -106,7 +106,7 @@ th, td {
 }
 
 thead {
-    background-color: #1d5b8a;
+    background-color: #d97706;
     color: #fff;
 }
 
@@ -150,7 +150,7 @@ form label {
     display: block;
     margin-bottom: 0.35rem;
     font-weight: 600;
-    color: #444;
+    color: #1a1a1a;
 }
 
 form input,
@@ -164,7 +164,7 @@ form select {
 }
 
 form button[type="submit"] {
-    background-color: #1d5b8a;
+    background-color: #c62828;
     color:  #fff;
     border: none;
     padding: 0.6rem 1.5rem;
@@ -180,7 +180,7 @@ form button[type="submit"]:hover {
 footer {
     text-align: center;
     padding: 1.25rem;
-    color: #7a8794;
+    color: #a91d3a;
     font-size: 0.9rem;
 }
 

@@ -9,8 +9,7 @@
 <body>
     <header>
         <h1>RM Padang</h1>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>
         <nav>
             <ul>
                 <li><a href="../index.html">Beranda</a></li>
@@ -26,7 +25,7 @@
     <main>
         <section>
             <h2>Tambah Menu</h2>
-            <form>
+            <form id="form-tambah">
                 <p>
                     <label for="nama">Nama Menu</label><br>
                     <input type="text" id="nama" name="nama" required>
@@ -56,5 +55,6 @@
     <footer>
         <p>&copy; RM-Padang</p>
     </footer>
+    <script src="../assets/js/app.js"></script>
 </body>
 </html>

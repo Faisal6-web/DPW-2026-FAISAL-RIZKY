@@ -10,16 +10,20 @@ function initNavToggle() {
 }
 
 // ===== Konfirmasi hapus (front-end only, belum ke server) =====
+// Memakai event delegation di document karena baris tabel sekarang
+// dirender dinamis via fetch (lihat buku.js/anggota.js) sehingga
+// tombol .btn-hapus belum tentu ada saat DOMContentLoaded.
 function initHapusConfirm() {
-    document.querySelectorAll(".btn-hapus").forEach(function (btn) {
-        btn.addEventListener("click", function () {
-            const row = btn.closest("tr");
-            const nama = row ? row.querySelector("td")?.textContent : "data ini";
-            const yakin = confirm("Yakin ingin menghapus \"" + nama + "\"?");
-            if (yakin && row) {
-                row.remove();
-            }
-        });
+    document.addEventListener("click", function (e) {
+        const btn = e.target.closest(".btn-hapus");
+        if (!btn) return;
+
+        const row = btn.closest("tr");
+        const nama = row ? row.querySelector("td")?.textContent : "data ini";
+        const yakin = confirm("Yakin ingin menghapus \"" + nama + "\"?");
+        if (yakin && row) {
+            row.remove();
+        }
     });
 }
 
@@ -62,30 +66,34 @@ function initValidasiForm() {
     form.addEventListener("submit", function (e) {
         let valid = true;
 
-        const judul = form.querySelector("[name='judul'], [name='nama']");
-        if (judul && judul.value.trim() === "") {
-            tampilkanError(judul, "Field ini wajib diisi.");
+        const nama = form.querySelector("[name='nama']");
+        if (nama){
+        if (nama.value.trim() === "") {
+            tampilkanError(nama, "Field ini wajib diisi.");
             valid = false;
-        } else if (judul) {
-            hapusError(judul);
+        } else {
+            hapusError(nama);
         }
+    }
 
-        const pengarang = form.querySelector("[name='pengarang']");
-        if (pengarang && pengarang.value.trim() === "") {
-            tampilkanError(pengarang, "Pengarang wajib diisi.");
+        const kategori = form.querySelector("[name='kategori']");
+        if (kategori) {
+        if (kategroi.value.trim() === "") {
+            tampilkanError(kategori, "Kategroi wajib diisi.");
             valid = false;
-        } else if (pengarang) {
-            hapusError(pengarang);
+        } else{
+            hapusError(kategori);
         }
+    }
 
-        const tahun = form.querySelector("[name='tahun']");
-        if (tahun) {
-            const nilai = parseInt(tahun.value, 10);
-            if (isNaN(nilai) || nilai < 1900 || nilai > 2026) {
-                tampilkanError(tahun, "Tahun harus di antara 1900-2026.");
+        const harga = form.querySelector("[name='harga']");
+        if (harga) {
+            const nilaiHarga = parseInt(harga.value, 10);
+            if (isNaN(nilaiHarga) || nilaiHarga < 0) {
+                tampilkanError(tahun, "Harga tidak boleh kosong atau negatif");
                 valid = false;
             } else {
-                hapusError(tahun);
+                hapusError(harga);
             }
         }
 
@@ -97,6 +105,37 @@ function initValidasiForm() {
                 valid = false;
             } else {
                 hapusError(stok);
+            }
+        }
+
+        const email = form.querySelector("[name='email']");
+        if (email) {
+            if (email.value.trim() === "") {
+                tampilkanError(email, "Email wajib diisi.");
+                valid = false;
+            } else {
+                hapusError(email);
+            }
+        }
+
+        const pesan = form.querySelector("[name='pesan']");
+        if (pesan) {
+            if (pesan.value.trim() === "") {
+                tampilkanError(pesan, "Pesan tidak boleh kosong.");
+                valid = false;
+            } else {
+                hapusError(pesan);
+            }
+        }
+
+        const nomor = form.querySelector("[name='nomor']");
+        if (nomor) {
+            const nilaiNomor = parseInt(nomor.value, 10);
+            if (nomor.value.trim() === "" || isNaN(nilaiNomor)) {
+                tampilkanError(nomor, "Nomor wajib diisi dengan angka.");
+                valid = false;
+            } else {
+                hapusError(nomor);
             }
         }
 

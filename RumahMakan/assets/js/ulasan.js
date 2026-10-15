@@ -26,7 +26,7 @@ async function muatDaftarUlasan() {
                 "<td>" +
                 "<button type=\"button\">Edit</button> " +
                 "<button type=\"button\" class=\"btn-hapus\">Hapus</button>" +
-                "<button type=\"button\">Simpan</button>" +
+                "<button type=\"button\">Non-Aktif</button>" +
                 "</td>";
             tbody.appendChild(tr);
         });

@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RM Padang | Daftar Ulasan</title>
+    <title>Rumah Makan | Tambah Ulasan</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <header>
-        <h1>RM Padang</h1>
+        <h1>Rumah Makan</h1>
         <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>
         <nav>
             <ul>
@@ -21,37 +21,33 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <section>
-            <h2>Daftar Ulasan</h2>
-            <div class="search-box">
-                <label for="search-input">Cari Daftar Ulasan</label>
-                <input type="text" id="search-input" placeholder="Ketik ulasan...">
-            </div>
-            <p id="loading-indicator" style="display:none;">Memuat data...</p>
-            <div class="table-responsive">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nama Lengkap</th>
-                        <th>Email</th>
-                        <th>Pesan</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-            <tbody>
-                
-            </tbody>
-            </table>
-            </div>
+            <h2>Tambah Ulasan</h2>
+            <form id="form-tambah">
+                <p>
+                    <label for="nama">Nama Pengirim</label><br>
+                    <input type="text" id="nama" name="nama" required>
+                </p>
+                <p>
+                    <label for="email">Email</label><br>
+                    <input type="text" id="email" name="email" required>
+                </p>
+                <p>
+                    <label for="pesan">Pesan Ulasan</label><br>
+                    <input type="text" id="pesan" name="pesan" required>
+                </p>
+                <p>
+                    <button type="submit">Simpan</button>
+                </p>
+            </form>
         </section>
     </main>
-
+    
     <footer>
-        <p>&copy; RM-Padang</p>
+        <p>&copy; Rumah Makan</p>
     </footer>
     <script src="../assets/js/app.js"></script>
-    <script src="../assets/js/ulasan.js"></script>
 </body>
 </html>

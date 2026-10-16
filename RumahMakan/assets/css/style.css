@@ -65,10 +65,12 @@ section h2 {
     color: #f9a826;
 }
 
+/*ringkasan beranda*/
 main section:nth-of-type(2) h2{
     text-align: center;
 }
 
+/*grid beranda */
 main section:nth-of-type(2) div {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

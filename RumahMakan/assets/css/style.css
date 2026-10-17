@@ -45,6 +45,38 @@ header nav a {
     font-weight: 500;
 }
 
+/*Halaman-uts*/
+#halaman-uts.uts-container {
+    text-align: center;
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#halaman-uts.foto-profil{
+    margin-bottom: 20px;
+}
+
+#halaman-uts.uts-table {
+    width: auto;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 16px;
+}
+
+#halaman-uts.uts-table th {
+    padding-right: 30px;
+    padding-bottom: 12px;
+    color: #333;
+}
+
+#halaman-uts .uts-table td {
+    padding-bottom: 12px;
+    color: #555;
+}
 
 main {
     max-width: 1000px;

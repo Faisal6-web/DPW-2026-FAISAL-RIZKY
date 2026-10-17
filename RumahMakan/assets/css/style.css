@@ -61,8 +61,10 @@ section {
 }
 
 section h2 {
+    background-color: #a91d3a;
     margin-bottom: 1rem;
     color: #f9a826;
+    text-align: center;
 }
 
 /*ringkasan beranda*/
@@ -180,9 +182,10 @@ form button[type="submit"]:hover {
 }
 
 footer {
+    background-color: #c62828;
     text-align: center;
     padding: 1.25rem;
-    color: #a91d3a;
+    color: #f9a826;
     font-size: 0.9rem;
 }
 

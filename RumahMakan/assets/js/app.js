@@ -128,6 +128,16 @@ function initValidasiForm() {
             }
         }
 
+        const kelas = form.querySelector("[name='kelas']");
+        if (kelas) {
+            if (kelas.value.trim() === "") {
+                tampilkanError(kelas, "Kelas tidak boleh kosong.");
+                valid = false;
+            } else {
+                hapusError(kelas);
+            }
+        }
+
         const nomor = form.querySelector("[name='nomor']");
         if (nomor) {
             const nilaiNomor = parseInt(nomor.value, 10);

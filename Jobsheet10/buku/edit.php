@@ -18,7 +18,7 @@ $stmt->execute(['id' => $id]);
 $buku = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (!$buku) {
-    header('Location: ;ist.php');
+    header('Location: list.php');
     exit;
 }
 ?>

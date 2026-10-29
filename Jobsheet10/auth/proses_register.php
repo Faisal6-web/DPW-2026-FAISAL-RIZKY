@@ -34,7 +34,7 @@ if ($cek->fetch()) {
 }
 
 $stmt = $pdo->prepare(
-    "INSERT INTO users (nama, username, password, role) VALUES (:nama, :username, :password, :petugas)"
+    "INSERT INTO users (nama, username, password, role) VALUES (:nama, :username, :password, 'petugas')"
 );
 $stmt->execute([
     'nama' => $nama,
